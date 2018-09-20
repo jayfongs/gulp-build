@@ -1,0 +1,75 @@
+@charset 'utf-8';
+/**
+ * 全局变量
+ */
+
+// Colors
+$gray-dark:                                 #333;
+$gray:                                      #666;
+$gray-light:                                #999;
+$gray-lighter:                              #ccc;
+$gray-lightest:                             #eee;
+
+// Options
+// 交换 PC端 和 移动端 显示的样式
+$option-media-query:                        true;
+// 交换 float 和 flex 的显示样式（PC：float， 移动端： flex）
+$option-flex:                               true;
+
+// Fonts
+$font-family:                               "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+
+$font-size-root:                            null;
+
+$font-size-base:                            16px;
+$font-size-lg:                              18px;
+$font-size-sm:                              14px;
+$font-size-xs:                              12px;
+
+$font-size-headings:                        (h1: 36px, h2: 3px, h3: 24px, h4: 18px, h5: 14px, h6: 12px);
+
+// Borders
+$border-radius-round:                       50%;
+$border-radius-semicircle:                  50px;
+$border-radius-lg:                          5px;
+$border-radius-sm:                          3px;
+
+// inputs
+$input-padding-x:                           9px;
+$input-padding-y:                           10px;
+
+$input-color:                               $gray;
+$input-border-color:                        $gray-lighter;
+$input-box-shadow:                          inset 0 1px 1px rgba(0, 0, 0, .075);
+$input-transition:                          border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+$input-error-color:                         #9F3A38;
+$input-error-bg-color:                      #FFF6F6;
+$input-error-border-color:                  #E0B4B4;
+
+$input-bg:                                  transparent;
+$input-bg-disabled:                         $gray-lightest;
+
+$input-placeholder-color:                   rgba(191, 191, 191, 0.87);
+$input-error-placeholder-color:             #e7bdbc;
+
+$input-border-focus:                        #009ae2;
+$input-box-shadow-focus:                    $input-box-shadow, 0 0 8px rgba($input-border-focus, .3);
+$input-placeholder-focus:                   rgba(115, 115, 115, 0.87);
+$input-error-placeholder-focus:             #da9796;
+$input-error-border-focus:                  $input-error-placeholder-focus;
+
+$input-border-radius:                       $border-radius-sm;
+
+// Buttons
+$btn-box-shadow:                            inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+$btn-transition:                            $input-transition;
+
+$btn-border-radius-round:                   $border-radius-round;
+$btn-border-radius-lg:                      $border-radius-lg;
+$bth-border-radius-sm:                      $border-radius-sm;
+
+$btn-padding-x:                             9px;
+$btn-padding-y:                             12px;
+$btn-margin-x:                              5px;
+$btn-margin-y:                              5px;

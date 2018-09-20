@@ -1,0 +1,211 @@
+<!--
+                            _ooOoo_
+                           o8888888o
+                           88" . "88
+                           (| -_- |)
+                            O\ = /O
+                        ____/`---'\____
+                      .   ' \\| |// `.
+                       / \\||| : |||// \
+                     / _||||| -:- |||||- \
+                       | | \\\ - /// | |
+                     | \_| ''\---/'' | |
+                      \ .-\__ `-` ___/-. /
+                   ___`. .' /--.--\ `. . __
+                ."" '< `.___\_<|>_/___.' >'"".
+               | | : `- \`.;`\ _ /`;.`/ - ` : | |
+                 \ \ `-. \_ __\ /__ _/ .-` / /
+         ======`-.____`-.___\_____/___.-`____.-'======
+                            `=---='
+
+         .............................................
+                  佛祖镇楼                  BUG辟易
+          佛曰:
+                  写字楼里写字间，写字间里程序员；
+                  程序人员写程序，又拿程序换酒钱。
+                  酒醒只在网上坐，酒醉还来网下眠；
+                  酒醉酒醒日复日，网上网下年复年。
+                  但愿老死电脑间，不愿鞠躬老板前；
+                  奔驰宝马贵者趣，公交自行程序员。
+                  别人笑我忒疯癫，我笑自己命太贱；
+                  不见满街漂亮妹，哪个归得程序员？
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/index.css?">
+    <title>样式查看📦🐈</title>
+</head>
+<body>
+    <section>
+        <h3>input：</h3>
+        <p>
+            <input type="text" class="form-input" placeholder="正常的input框">
+        </p>
+        <p>
+            <input type="text" class="form-input" disabled placeholder="加了disabled的input框">
+        </p>
+        <p>
+            <input type="text" class="form-input input-error" placeholder="出错了的input框">
+        </p>
+    </section>
+
+    <section>
+        <h3>复选框：</h3>
+        <input type="checkbox" name="" id="checkbox1" checked class="form-checkbox" hidden>
+        <label for="checkbox1"></label>
+
+        <input type="checkbox" name="" id="checkbox2" class="form-checkbox" hidden>
+        <label for="checkbox2"></label>
+
+        <input type="checkbox" name="" id="slider1" class="slider" hidden>
+        <label for="slider1"></label>
+        <input type="checkbox" name="" id="slider2" class="slider" checked hidden>
+        <label for="slider2"></label>
+    </section>
+
+    <section>
+        <h3>单选框：</h3>
+        <input type="radio" name="radio" class="radio" id="radio1" hidden checked>
+        <label for="radio1"></label>
+        <input type="radio" name="radio" class="radio" id="radio2" hidden>
+        <label for="radio2"></label>
+    </section>
+
+    <section>
+        <h3>下拉菜单：</h3>
+        <select class="example">
+            <option></option>
+            <option value="0">HTML5</option>
+            <option value="1">CSS3</option>
+            <option value="2">JavaScript</option>
+            <option value="3">Vue</option>
+        </select>
+    </section>
+
+    <section>
+        <h3>button：</h3>
+        <p>
+            <button class="btn btn-border" disabled>边框按钮</button>
+            <button class="btn btn-border active">active 边框按钮</button>
+            <button class="btn btn-red">红色按钮</button>
+            <button class="btn btn-red" disabled>disabled 的按钮</button>
+            <button class="btn btn-loading">Loading</button>
+        </p>
+    </section>
+
+    <section>
+        <h3>面包屑导航：</h3>
+        <section class="breadcrumb">
+            <a href="">首页</a>
+            <i class="fa fa-angle-right"></i>
+            <a href="javascript:;">上一页</a>
+            <i class="fa fa-angle-right"></i>
+            This
+        </section>
+    </section>
+
+    <section>
+        <h3>菜单指示：</h3>
+        <section class="menu-pointing-border">
+            <a href="javascript:;" class="active">Home</a>
+            <a href="javascript:;">Tags</a>
+            <a href="javascript:;">About</a>
+        </section>
+        <section class="menu-pointing-bg">
+            <a href="javascript:;" class="active">Home</a>
+            <a href="javascript:;">Tags</a>
+            <a href="javascript:;">About</a>
+        </section>
+    </section>
+
+    <section>
+        <h3>手风琴折叠菜单：</h3>
+        <ul class="accordion">
+            <li>
+                <a href="javascript:;">
+                    <i class="fa fa-globe"></i>
+                    <span>Web</span>
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="javascript:;">HTML5</a></li>
+                    <li><a href="javascript:;">CSS3</a></li>
+                    <li><a href="javascript:;">JavaScript</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <i class="fa fa-globe"></i>
+                    <span>Web</span>
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul class="submenu">
+                    <li><a href="javascript:;">HTML5</a></li>
+                    <li><a href="javascript:;">CSS3</a></li>
+                    <li><a href="javascript:;">JavaScript</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vendors/select2.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        /**
+         * 菜单切换
+         */
+        function toggle(el) {
+            $(el).on('click', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+        }
+
+        /**
+         * 手风琴折叠菜单
+         */
+        function accordion(obj) {
+            var Accordion = function(el, multiple) {
+                this.el = el || {};
+                this.multiple = multiple || false;
+
+                // Variables privadas
+                var links = this.el.find('> li > a');
+                // Evento
+                links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+            };
+
+            Accordion.prototype.dropdown = function(e) {
+                var $el = e.data.el;
+                $this = $(this),
+                    $next = $this.next();
+
+                $next.stop().slideToggle();
+                $this.parent().toggleClass('open');
+
+                if (!e.data.multiple) {
+                    $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                }
+            };
+
+            new Accordion($(obj), false);
+        }
+
+
+        $(function() {
+            toggle('.menu-pointing-border > a');
+            toggle('.menu-pointing-bg > a');
+            accordion('.accordion');
+
+            $('.example').select2({
+                width: '100%',
+                placeholder: "请选择"
+            });
+        });
+    </script>
+</body>
+</html>

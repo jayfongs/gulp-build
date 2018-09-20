@@ -1,0 +1,32 @@
+@charset 'utf-8';
+/**
+ * 全局 Button 基本样式
+ */
+
+.btn{
+	min-width: 120px;
+	min-height: 36px;
+	padding: $btn-padding-x $btn-padding-y;
+	border-radius: $bth-border-radius-sm;
+	color: $gray-dark;
+	cursor: pointer;
+	border: 0;
+	background: $gray-lighter;
+	margin: $btn-margin-x $btn-margin-y;
+	-webkit-transition: $btn-transition;
+	-moz-transition: $btn-transition;
+	transition: $btn-transition;
+	outline: 0;
+	box-shadow: $btn-box-shadow;
+
+	&:disabled{
+		cursor: default;
+		opacity: .5;
+		background: $gray-lighter;
+		color: $gray-dark;
+
+		&:hover{
+			@extend :disabled;
+		}
+	}
+}

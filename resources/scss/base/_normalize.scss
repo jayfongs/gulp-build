@@ -1,0 +1,59 @@
+@charset 'utf-8';
+/**
+ * 基于 Normalize.css 添加额外规则
+ */
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-tap-highlight-color: transparent;   // 移动端点击去除边框
+}
+
+body {
+	min-width: 320px;
+	font-family: $font-family;
+	line-height: 1.5;
+	color: $gray-dark;
+	background: #fff;
+}
+
+ol, ul, dl {
+	margin: 0 0 1rem 0;
+}
+
+ol, ul {
+	list-style: none;
+	padding: 0;
+}
+
+dt {
+	font-weight: normal;
+}
+
+dd {
+	margin-left: 0;   // 去掉浏览器默认样式
+}
+
+a {
+	color: $gray-dark;
+	text-decoration: none;
+}
+
+i, em {
+	font-style: normal;
+}
+
+[type="number"]{
+	padding: 0; // 去除IOS的默认样式
+}
+
+// 遍历heading
+@each $header, $size in $font-size-headings {
+	#{$header}{
+		font-size: $size;
+	}
+}

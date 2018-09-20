@@ -1,0 +1,16 @@
+{
+  "name": "item",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^5.0.0",
+    "font-awesome": "Font-Awesome#^4.7.0",
+    "select2": "^4.0.3",
+    "jquery": "^2.2.4"
+  }
+}

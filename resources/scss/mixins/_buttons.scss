@@ -1,0 +1,75 @@
+@charset 'utf-8';
+/**
+ * Button 布局
+ */
+
+// 边框按钮
+@mixin button-border ($bg-color) {
+	font-size: $font-size-sm;
+	border: 1px solid $gray-lighter;
+	background: #fff;
+
+	&:hover{
+		background: $bg-color;
+	}
+	
+	&.active{
+		background: $gray-lighter;
+	}
+}
+
+// 红色按钮
+@mixin button-red ($border: 0, $bg-color: null, $color: null) {
+	border: $border;
+	font-size: $font-size-sm;
+	background: $bg-color;
+	color: $color;
+}
+
+// loading 按钮
+@mixin button-loading ($bg-color: $gray-lighter, $width: 15px, $height: 15px, $margin-x: -7px, $margin-y: -7px) {
+	position: relative;
+	cursor: default;
+	color: transparent;
+	background: $bg-color;
+
+	&:before{
+		content: '';
+		width: $width;
+		height: $height;
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: $margin-x $margin-y;
+		border: 2px solid $gray-light;
+	}
+
+	&:after{
+		content: '';
+		width: $width;
+		height: $height;
+		margin: $margin-x $margin-y;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 50%;
+		border-width: 2px;
+		border-style: solid;
+		border-color: #FFF transparent transparent;
+		box-shadow: 0 0 0 1px transparent;
+		animation: button-spin .6s linear infinite;
+	}
+
+	@keyframes button-spin {
+		from {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+
+		to {
+			-webkit-transform: rotate(360deg);
+			transform: rotate(360deg);
+		}
+	}
+}

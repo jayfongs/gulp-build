@@ -1,0 +1,139 @@
+@charset 'utf-8';
+/**
+ * 菜单
+ */
+
+// 菜单边框指示
+@mixin menu-pointing-border ($main-border: null, $text-align: null, $margin-x: 10px, $margin-y: 0, $link-color: $gray-dark, $link-padding-x: 16px, $link-padding-y: 20px, $active-border: null, $active-margin-bottom: -2px) {
+	font-size: $font-size-lg;
+	border-bottom: $main-border;
+	text-align: $text-align;
+	margin: $margin-x $margin-y;
+
+	a{
+		padding: $link-padding-x $link-padding-y;
+		display: inline-block;
+		color: $link-color;
+
+		&.active{
+			border-bottom: $active-border;
+			margin-bottom: $active-margin-bottom;
+		}
+	}
+}
+
+// 菜单背景指示
+@mixin menu-pointing-bg ($main-border: null, $text-align: center, $margin-x: 10px, $margin-y: 0, $link-color: $gray-dark, $border-top-left-radius: 5px, $border-top-right-radius: 5px, $link-padding-x: 10px, $link-padding-y: 10px, $active-bg-color: blue, $active-border: 2px solid blue, $active-margin-bottom: -2px) {
+	font-size: $font-size-lg;
+	border-bottom: $main-border;
+	text-align: $text-align;
+	margin: $margin-x $margin-y;
+
+	a{
+		padding: $link-padding-x $link-padding-y;
+		display: inline-block;
+		color: $link-color;
+
+		&.active{
+			border-top-left-radius: $border-top-left-radius;
+			border-top-right-radius: $border-top-right-radius;
+			background: $active-bg-color;
+			color: #fff;
+			border-bottom: $active-border;
+			margin-bottom: $active-margin-bottom;
+		}
+	}
+
+}
+
+// 手风琴折叠菜单
+@mixin accordion ($width: 100%, $bg-color: #fff, $margin-x: null, $margin-y: null, $a-color: $gray-dark, $font-size: $font-size-lg, $font-weight: null, $border-bottom: null, $padding: 15px 15px 15px 40px, $a-bg-hover: #b63b4d, $a-color-hover: #fff, $a-border-hover: null, $i-margin-top: -9px, $submenu-bg-color: $gray, $sutmenu-a-border: null, $sutmenu-a-color: #fff, $submenu-padding: 12px 12px 12px 40px) {
+	width: $width;
+	background: $bg-color;
+	margin: $margin-x $margin-y;
+
+	> li > a {
+		color: $a-color;
+		font-size: $font-size;
+		display: block;
+		font-weight: $font-weight;
+		border-bottom: $border-bottom;
+		transition: all 0.25s ease;
+
+		&:hover{
+			background: $a-bg-hover;
+			color: $a-color-hover;
+			border-bottom: $a-border-hover;
+		}
+
+		i{
+			transition: all 0.4s ease;
+		}
+
+		@if $option-flex {
+			overflow: hidden;
+			position: relative;
+			padding: $padding;
+
+			i{
+				position: absolute;
+				top: 50%;
+				left: 15px;
+				margin-top: $i-margin-top;
+			}
+
+			i.fa-chevron-down{
+				right: 15px;
+				left: auto;
+			}
+		} @else {
+			display: flex;
+			align-items: center;
+			padding: $padding;
+
+			span{
+				flex: 1;
+				padding-left: 20px;
+			}
+		}
+	}
+
+	> li:last-child > a{
+		border-bottom: 0;
+	}
+
+	.submenu{
+		display: none;
+		background: $submenu-bg-color;
+		font-size: $font-size-sm;
+		margin: -1px 0 0;
+		position: relative;
+
+		a{
+			display: block;
+			color: $sutmenu-a-color;
+			transition: all 0.25s ease;
+			border-bottom: $sutmenu-a-border;
+			padding: $submenu-padding;
+			margin-top: -1px;
+
+			&:hover{
+				background: $a-bg-hover;
+				color: $a-color-hover;
+				border-bottom: $a-border-hover;
+			}
+		}
+
+		li:last-child > a{
+			border-bottom: 0;
+		}
+	}
+	
+	> li.open > a {
+		background: $a-bg-hover;
+
+		i.fa-chevron-down{
+			transform: rotate(180deg);
+		}
+	}
+}

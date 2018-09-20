@@ -1,0 +1,18 @@
+@charset 'utf-8';
+/**
+ * 面包屑导航
+ */
+
+@mixin breadcrumb ($link-color: $gray-dark, $margin-x: 10px, $margin-y: 0, $icon-color: $gray-lighter, $icon-margin-x: 0, $icon-margin-y: 5px) {
+	font-size: $font-size-lg;
+	margin: $margin-x $margin-y;
+
+	a{
+		color: $link-color;
+	}
+
+	i{
+		color: $icon-color;
+		margin: $icon-margin-x $icon-margin-y;
+	}
+}
